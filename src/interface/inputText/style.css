@@ -1,0 +1,14 @@
+.input{
+   padding-right: 3%;
+}
+
+.input_text {
+   padding: 10px;
+   border-radius: 10px;
+   outline:none;
+   width: 80%;
+}
+
+.input_text::placeholder {
+   font-size:14px;
+}

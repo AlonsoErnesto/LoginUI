@@ -1,0 +1,25 @@
+.body_center {
+   display: flex;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+   background:red;
+   height: 100vh;  /*100% de la pantalla actual (1vh = 1% de la altura del viewport )*/
+
+}
+
+
+.center_card {
+   display: grid;
+   grid-template-columns: repeat(2,50%);
+   width: 80vh;
+   height: 50vh;
+   background:skyblue;
+}
+
+.center_left{
+   background-color: white;
+}
+.center_right {
+   background:blue;
+}
