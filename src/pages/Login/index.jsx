@@ -1,5 +1,7 @@
 import Form from '../../components/Login/Form';
 import './style.css';
+import img from "../../assets/images/img1.png";
+
 
 const LoginPage = () => {
    return (
@@ -7,8 +9,9 @@ const LoginPage = () => {
          <div className="body_center">
             <div className='center_card'>
                <div className='center_left'>
-                  <img src="../../assets/images/LoginImg.png"/>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.    Nostrum sit ipsa voluptatum culpa molestiae explicabo odit  pariatur dolor id fugiat.</p>
+                  <img className='img1' src={img}/>
+                  <h2 className='title_logo'>LoginUI</h2>
+                  <p>Inicia sesion o registrate en LoginUI para conocer nuevas emociones.</p>
                </div>
                <div className='center_right'>
                   <Form/>

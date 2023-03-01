@@ -3,12 +3,14 @@
 }
 
 .input_text {
-   padding: 10px;
+   padding: 1vh;
    border-radius: 10px;
    outline:none;
-   width: 80%;
+   border:1px solid #CECECE;
+   width:100%;
 }
 
 .input_text::placeholder {
    font-size:14px;
+   font-weight: lighter;
 }
