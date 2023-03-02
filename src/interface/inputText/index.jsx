@@ -1,6 +1,7 @@
 import './style.css';
 
-const Input = ({placeholder,name,type,id,value}) => {
+const Input = ({placeholder,name,type,id,value,onfocus}) => {
+
    return(
       <div className="input">
          <input 
@@ -10,7 +11,7 @@ const Input = ({placeholder,name,type,id,value}) => {
             type={type}
             id={id} 
             value={value}
-
+            onFocus={onfocus}
          />
       </div>
    )

@@ -1,6 +1,8 @@
-import Form from '../../components/Login/Form';
-import './style.css';
 import img from "../../assets/images/img1.png";
+import './style.css';
+
+import Form from '../../components/Login/Form';
+import ImgInteractive from '../../interface/ImgInteractive'
 
 
 const LoginPage = () => {
@@ -14,6 +16,7 @@ const LoginPage = () => {
                   <p>Inicia sesion o registrate en LoginUI para conocer nuevas emociones.</p>
                </div>
                <div className='center_right'>
+                  <ImgInteractive/>
                   <Form/>
                </div>
             </div>

@@ -1,0 +1,56 @@
+.conteiner_img {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom:10px;
+}
+
+.circle_img {
+   border : 1px solid #000000;
+   border-radius: 50%;
+   width: 14vh;
+   height: 14vh;
+   display: flex;
+   justify-content: center;
+}
+
+
+.head_img {
+   background-color: red;
+   width: 10vh;
+   height: 10vh;
+   border-radius: 50%;
+   align-items: center;
+   position: relative;
+   z-index:1;
+}
+
+.body_img {
+   background-color: blue;
+   width: 13vh;
+   height: 5vh;
+   bottom:0;
+   border-top-left-radius: 50%;
+   border-top-right-radius: 50%;
+   position: absolute;
+}
+
+.eye_img_right, .eye_img_left{
+   position:absolute;
+   width: 2.5vh;
+   height: 2.5vh;
+   background:blue;
+   border-radius: 20px;
+   margin:13px;
+}
+
+.eye_img_right:hover, .eye_img_left:hover {
+   width: 2.5vh;
+   height: .4vh;
+}
+
+
+.eye_img_right {
+   right: 0;
+}
