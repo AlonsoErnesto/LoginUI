@@ -35,10 +35,11 @@
    background: #d9a7c7;  /* fallback for old browsers */
    background: -webkit-linear-gradient(to bottom, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
    background: linear-gradient(to bottom, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
    padding:10%;
    border-end-end-radius: 7px;
    border-start-end-radius: 7px;
+   width: 32vh;
+   height: 42vh;
 }
 
 .img1 {
@@ -52,4 +53,13 @@
    transform: rotate(90deg);
    filter: blur(1.7px);
    z-index:-1;
+}
+
+
+/* ---------MEDIA QUERY  ------------*/
+@media (max-height:680px){
+   .center_left > p {
+      font-size: 16px;
+      width: 35vh;
+   }
 }
