@@ -20,12 +20,15 @@ const ButtonPrimary =({placeholder,type,value,classname,fn}) => {
    
 
    return(
-      <input
-         placeholder={placeholder} 
-         type={type} 
-         value={value} 
-         className={style}
-      />
+      <div className="wrapper">
+         <button
+            placeholder={placeholder} 
+            type={type} 
+            className={`wave-btn ${style}`}
+         >
+            {value}
+         </button>
+      </div>
    );
 }
 
