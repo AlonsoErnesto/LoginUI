@@ -1,7 +1,13 @@
-  .wave-btn {
+.wrapper {
+  background-color: #ffffff;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.wave-btn {
     width: 100%;
     color: #000000;
-    background: #ffffff;
+    background: transparent;
     padding: 5px;
     font-size: 20px;
     font-weight: 300;
@@ -10,6 +16,7 @@
     position: relative;
     overflow: hidden;
     transition: all 1s;
+    z-index: 2;
   }
 
   .wave-btn:hover:before {
@@ -20,9 +27,9 @@
     border-radius: 100px;
     background-color: #0097e6;
     top: 30px;
+    z-index: 1;
     left: 50%;
-    transform: translate(-50%);
-    animation: wave 5s infinite linear;
+    animation: wave 10s infinite linear;
     transition: all 1s;
   }
 
