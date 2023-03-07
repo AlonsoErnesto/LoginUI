@@ -11,7 +11,16 @@ const Input = ({placeholder,name,type,id,value,onfocus}) => {
             type={type}
             id={id} 
             value={value}
-            onFocus={onfocus}
+            onFocus={(e)=>{
+               if (e.currentTarget === e.target) {
+                  onfocus(true);
+                } 
+              }}
+              onBlur={(e) => {
+                if (e.currentTarget === e.target) {
+                  onfocus(false); 
+                }
+            }}
          />
       </div>
    )

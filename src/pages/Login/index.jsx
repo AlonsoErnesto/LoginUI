@@ -3,9 +3,13 @@ import './style.css';
 
 import Form from '../../components/Login/Form';
 import ImgInteractive from '../../interface/ImgInteractive'
+import { useState } from "react";
 
 
 const LoginPage = () => {
+
+   const [password_true, setPassword_true] = useState(false);
+
    return (
       <div className="background">
          <div className="body_center">
@@ -16,8 +20,8 @@ const LoginPage = () => {
                   <p>Inicia sesion o registrate en LoginUI para conocer nuevas emociones.</p>
                </div>
                <div className='center_right'>
-                  <ImgInteractive/>
-                  <Form/>
+                  <ImgInteractive password_true={password_true}/>
+                  <Form setPassword_true={setPassword_true}/>
                </div>
             </div>
          </div>

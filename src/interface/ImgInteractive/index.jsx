@@ -1,14 +1,14 @@
 import './style.css';
 
-const ImgInteractive= ( ) => {
+const ImgInteractive= ({password_true}) => {
    return (
       <div className="conteiner_img">
          <div className='circle_img'>
             <div className='head_img'>
-               <div className='eye_img_left'>
+               <div className={`${password_true ? 'eye_img_left_hover' : 'eye_img_left'} `}>
 
                </div>
-               <div className='eye_img_right'>
+               <div className={`${password_true ? 'eye_img_right_hover' : 'eye_img_right'}`}>
                </div>
             </div>
             <div className='body_img'>
