@@ -1,3 +1,4 @@
+
 .label_form {
    font-weight: 400;
    margin-left: 5px;
@@ -10,3 +11,24 @@
 }
 
 
+.signup_btn {
+   right: 0;
+   position: absolute;
+   margin-top: 3px;
+   font-size: 15px;
+   color: rgb(30, 30, 165);
+   cursor: pointer;
+}
+
+.signup_btn:hover {
+   text-decoration: underline;
+}
+
+
+.signup_btn_true {
+   display: none;
+}
+
+.form_activated{
+   display: none;
+}
