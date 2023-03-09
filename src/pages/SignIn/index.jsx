@@ -1,7 +1,7 @@
 import img from "../../assets/images/img1.png";
 import './style.css';
 
-import Form from '../../components/Login/Form';
+import FormSignIn from '../../components/Login/Form';
 import ImgInteractive from '../../interface/ImgInteractive'
 import { useState } from 'react';
 import SignUp from "../SignUp";
@@ -13,7 +13,7 @@ const SignIn = () => {
 
    const [password_true, setPassword_true] = useState(false);
    const [onAnimated, setOnAnimated] = useState(true);
-   const [loading, setLoading] = useState(true)
+   const [loading, setLoading] = useState(false)
 
 
    const SignUpFunction = () => {
@@ -24,7 +24,7 @@ const SignIn = () => {
 
    return (
       <div className="background">
-         <div className="body_center">
+         <div className={ !loading ? `body_center` : `body_center_blur`}>
             <div className='center_card'>
                <div className='center_left'>
                   <img className='img1' src={img}/>
@@ -37,7 +37,7 @@ const SignIn = () => {
                      
                       }}>
                         <ImgInteractive password_true={password_true}/>
-                        <Form setPassword_true={setPassword_true} SignUpFunction={SignUpFunction} setLoading={setLoading}/>
+                        <FormSignIn setPassword_true={setPassword_true} SignUpFunction={SignUpFunction} setLoading={setLoading}/>
                      </div>
                       : 
                       <SignUp setOnAnimated={setOnAnimated}/>
@@ -46,22 +46,19 @@ const SignIn = () => {
                </div>
             </div>
          </div>
-         { loading ?? 
+         { loading &&
+         <div className="loading_contain">
             <Dna
-            visible={loading}
-            height="80"
-            width="80"
-            ariaLabel="dna-loading"
-            wrapperStyle={{
-               position:'relative',
-               zIndex:'2',
-               display:'flex',
-               alignItems:'center',
-               justifyContent:'center',
-             }}
-            wrapperClass="dna-wrapper"
-            className="loading"
+               visible={loading}
+               height="80"
+               width="80"
+               ariaLabel="dna-loading"
+               wrapperStyle={{
+               }}
+               wrapperClass="dna-wrapper"
+               className="loading"
             />
+         </div>
          }
       </div>
    )

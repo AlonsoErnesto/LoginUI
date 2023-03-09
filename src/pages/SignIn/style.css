@@ -55,6 +55,15 @@
    z-index:-1;
 }
 
+.loading_contain {
+   position: absolute;
+   top:50vh;
+   left:45%;
+}
+
+.body_center_blur {
+   display: none;
+}
 
 /* ---------MEDIA QUERY  ------------*/
 @media (max-height:680px){

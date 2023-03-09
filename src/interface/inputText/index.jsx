@@ -1,6 +1,6 @@
 import './style.css';
 
-const Input = ({placeholder,name,type,id,value,onfocus}) => {
+const Input = ({placeholder,name,type,id,value,onfocus,onChange}) => {
 
    return(
       <div className="input">
@@ -10,6 +10,7 @@ const Input = ({placeholder,name,type,id,value,onfocus}) => {
             name={name}
             type={type}
             id={id} 
+            onChange={onChange}
             value={value}
             onFocus={(e)=>{
                if (e.currentTarget === e.target) {
