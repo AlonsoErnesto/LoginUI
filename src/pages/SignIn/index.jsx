@@ -3,19 +3,19 @@ import './style.css';
 
 import Form from '../../components/Login/Form';
 import ImgInteractive from '../../interface/ImgInteractive'
-import { useParams } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import SignUp from "../SignUp";
+import { Dna } from  'react-loader-spinner'
+
 
 
 const SignIn = () => {
 
    const [password_true, setPassword_true] = useState(false);
    const [onAnimated, setOnAnimated] = useState(true);
+   const [loading, setLoading] = useState(true)
 
 
-   const navigate = useNavigate();
    const SignUpFunction = () => {
       setOnAnimated(false);
       // navigate("/signup");
@@ -37,15 +37,32 @@ const SignIn = () => {
                      
                       }}>
                         <ImgInteractive password_true={password_true}/>
-                        <Form setPassword_true={setPassword_true} SignUpFunction={SignUpFunction}/>
+                        <Form setPassword_true={setPassword_true} SignUpFunction={SignUpFunction} setLoading={setLoading}/>
                      </div>
                       : 
-                      <SignUp/>
+                      <SignUp setOnAnimated={setOnAnimated}/>
                   }
                   
                </div>
             </div>
          </div>
+         { loading ?? 
+            <Dna
+            visible={loading}
+            height="80"
+            width="80"
+            ariaLabel="dna-loading"
+            wrapperStyle={{
+               position:'relative',
+               zIndex:'2',
+               display:'flex',
+               alignItems:'center',
+               justifyContent:'center',
+             }}
+            wrapperClass="dna-wrapper"
+            className="loading"
+            />
+         }
       </div>
    )
 };

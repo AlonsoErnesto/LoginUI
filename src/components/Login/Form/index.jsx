@@ -1,10 +1,18 @@
 import Input from '../../../interface/inputText';
 import ButtonPrimary from '../../../interface/button_primary';
 import './style.css';
-import SignUp from '../../../pages/SignUp'
 
-const Form = ({setPassword_true,SignUpFunction}) => {
+
+const Form = ({setPassword_true,SignUpFunction,setLoading}) => {
  
+   const SignIn = (e) => {
+      e.preventDefault();
+      setLoading(true);
+      setTimeout(() => {
+         setLoading(false);
+      }, 2000);
+      console.log('first')
+   }
 
 
    return (
@@ -17,7 +25,7 @@ const Form = ({setPassword_true,SignUpFunction}) => {
            <label className='label_form' htmlFor='password'>Password</label>               
            <Input placeholder='Password' onfocus={setPassword_true} name="password" type="password" id="password"/>
            {/* Submit */}
-           <ButtonPrimary type="submit" classname='btn_login' value="Sign In"/>
+           <ButtonPrimary type="submit" classname='btn_login' value="Sign In" fn={SignIn}/>
            <a onClick={SignUpFunction} className='signup_btn' >Sign Up</a>
         </form>
       </div>
